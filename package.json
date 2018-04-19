@@ -7,10 +7,10 @@
   },
   "description": "Kickoff for web applications",
   "scripts": {
-    "start": "node_modules/.bin/gulp --env production",
-    "pug-diff" : "git diff --name-only --cached --relative | grep \\\\.pug$ | xargs ./node_modules/.bin/pug-lint",
+    "start": "node_modules/.bin/gulp",
+    "pug-diff": "git diff --name-only --cached --relative | grep \\\\.pug$ | xargs ./node_modules/.bin/pug-lint",
     "lint-diff": "git diff --name-only --cached --relative | grep \\.js$ | xargs ./node_modules/eslint/bin/eslint.js",
-    "precommit" : "npm run pug-diff && npm run lint-diff",
+    "precommit": "npm run pug-diff && npm run lint-diff",
     "lint": "sass-lint 'src/**/*.scss' -v -q"
   },
   "cacheDirectories": [
@@ -26,7 +26,9 @@
     "url": "https://github.com/Wolox/frontend-bootstrap/issues"
   },
   "homepage": "https://github.com/Wolox/frontend-bootstrap",
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2.5.16"
+  },
   "devDependencies": {
     "babel-core": "^6.8.0",
     "babel-eslint": "^7.1.1",

@@ -7,8 +7,9 @@ html(lang='en')
     link(href='/css/vendor.css' rel='stylesheet')
     link(href='/css/application.css' rel='stylesheet')
   body
-    .center
-      h1 Frontend Bootstrap!
+    #app.center
+      h1
+        | {{ message }}
       i.fa.fa-heart(aria-hidden='true')
     // inject:js
     // endinject
